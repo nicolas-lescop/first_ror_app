@@ -1,7 +1,12 @@
 FirstRorApp::Application.routes.draw do
-  get "pages/home"
+  root to: 'pages#home'
 
-  get "pages/contact"
+  # Users routes
+  match '/signup',  to: 'users#new'
+
+  # Statics Pages routes
+  match '/contact', to: 'pages#contact'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

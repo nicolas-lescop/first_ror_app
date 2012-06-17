@@ -1,10 +1,14 @@
 module ApplicationHelper
 
-  def get_title title
-    if title.nil?
-      action_name
+  # Returns the full title on a per-page basis.
+  def full_title(page_title)
+    base_title = "Ruby on Rails Tutorial Sample App"
+    if page_title.nil?
+      "#{base_title} | #{action_name.capitalize}"
+    elsif page_title.empty?
+      base_title
     else
-      title
+      "#{base_title} | #{page_title}"
     end
   end
 

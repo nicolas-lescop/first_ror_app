@@ -19,7 +19,6 @@ group :test do
   gem 'libnotify'
   gem 'guard-spork'
   gem 'spork'
- #gem 'webrat'
 end
 
 # Gems used only for assets and not required
@@ -34,6 +33,7 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'bootstrap-sass'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
